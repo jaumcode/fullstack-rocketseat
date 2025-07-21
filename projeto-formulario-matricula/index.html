@@ -44,16 +44,71 @@
 
                         <div class="textarea-wrapper">
                             <label for="medical-info">Informações médicas </label>
-                            <textarea name="medical-info" id="medical-info" cols="30" rows="10" placeholder="A criança possui alguma condição média que a escola deve estar ciente? Especifique "></textarea>
+                            <textarea name="medical-info" id="medical-info" cols="30" rows="6" placeholder="A criança possui alguma condição média que a escola deve estar ciente? Especifique "></textarea>
                         </div>
 
                         <div class="droparea-wrapper">
                             <label for="birth-file"> Certidão de nascimento </label>
-                            <input type="file" name="birth-file" id="birth-file">
-                            <img src="aseets/cloud-upload.svg" alt="">
-                            <p>
-                                Clique aqui para <br> selecionar os arquivos
-                            </p>
+                            <div class="dropzone">
+                                <input type="file" name="birth-file" id="birth-file">
+                                <img src="aseets/cloud-upload.svg" alt="">
+                                <p>
+                                    Clique aqui para <br> selecionar os arquivos
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="address">
+                        <legend> Endereço Residencial </legend>
+                        <div class="input-wrapper">
+                            <label for="cep"> CEP </label>
+                            <input type="text" name="cep" id="cep">
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-2">
+                                <label for="street"> Rua </label>
+                                <input type="text" name="street" id="street">
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="number"> Nº </label>
+                                <input type="number" name="number" id="number">
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-2">
+                                <label for="city"> Cidade </label>
+                                <input type="text" name="city" id="city" value="São Paulo" disabled>
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="state"> Estado </label>
+                                <input type="text" name="state" id="state" value="SP" disabled>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="gardian">
+                        <legend> Informações do Responsável </legend>
+                        <div class="input-wrapper">
+                            <label for="gardian"> Nome do Responsável </label>
+                            <input type="text" name="gardian" id="gardian">
+                            <small> Principal responsável legal e contato de emergência </small>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="phone"> Telefone </label>
+                            <input type="text" name="phone" id="phone" placeholder="(10) 9 8765-4321">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="mail"> Email </label>
+                            <input type="email" name="mail" id="mail" required>
+                            <div class="error">
+                                <img src="aseets/alert-circle.svg" alt="ícone de alerta vermelho">
+                                <span> Insira um e-mail válido </span>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
